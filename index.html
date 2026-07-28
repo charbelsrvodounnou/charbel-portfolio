@@ -169,6 +169,8 @@
   .frame-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; min-height: 150px; }
   .frame-body .block { background: var(--line); border-radius: 4px; }
   .frame-body .block.accent { background: var(--accent); opacity: 0.55; }
+  .frame-body.has-shot { padding: 0; min-height: 200px; }
+  .frame-body.has-shot img { width: 100%; height: 100%; min-height: 200px; object-fit: cover; object-position: top; display: block; }
 
   .mock-dashboard { flex-direction: row; }
   .mock-dashboard .side { width: 26%; background: var(--accent); opacity: 0.28; border-radius: 4px; }
@@ -197,7 +199,11 @@
   .mock-grid .line-full { grid-column: 1 / -1; height: 10px; background: var(--accent); opacity: 0.4; }
 
   .project-body { z-index: 1; }
-  .project-tag { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); display: block; margin-bottom: 6px; }
+  .project-tag-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+  .project-tag { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); display: block; }
+  .visit-link { font-size: 0.76rem; font-weight: 700; color: var(--soft); display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; transition: color 0.15s ease; }
+  .visit-link:hover { color: var(--accent); }
+  .visit-link svg { width: 12px; height: 12px; }
   .project-card h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; margin: 0 0 10px; letter-spacing: -0.005em; }
   .project-card .desc { font-size: 0.92rem; color: var(--soft); margin: 0 0 16px; max-width: 60ch; }
   .chiprow { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -330,7 +336,7 @@
       <div>
         <p class="kicker">Développeur Web Fullstack</p>
         <h1>Je conçois des sites<br>qui <span class="accent">convertissent vos visiteurs.</span></h1>
-        <p class="pitch">Depuis <strong>2 ans</strong>, j'aide les entreprises et entrepreneurs à digitaliser leur relation client : sites web, tunnels de vente, dashboards de gestion — avec des inscriptions simplifiées, des réservations fluides et des parcours pensés pour convertir. <strong>5 projets livrés</strong>, du site vitrine au SaaS multi-tenant.</p>
+        <p class="pitch">Depuis <strong>2 ans</strong>, j'aide les entreprises et entrepreneurs à digitaliser leur relation client : sites web, tunnels de vente, dashboards de gestion — avec des inscriptions simplifiées, des réservations fluides et des parcours pensés pour convertir. <strong>6 projets livrés</strong>, du site vitrine au SaaS multi-tenant.</p>
         <div class="hero-cta">
           <a class="pill-btn" id="dl-hero" href="assets/cv/Charbel-Vodounnou-CV.pdf" download="Charbel-Vodounnou-CV.pdf">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
@@ -378,7 +384,7 @@
     <div class="sec-head">
       <p class="eyebrow">Portfolio</p>
       <h2>Projets <span class="accent">récents</span></h2>
-      <p>Cinq projets, du site vitrine au SaaS multi-tenant — chacun pensé pour un usage réel.</p>
+      <p>Six projets, du site vitrine au SaaS multi-tenant — chacun pensé pour un usage réel.</p>
     </div>
 
     <div class="project-card">
@@ -391,7 +397,9 @@
       </div>
       <div class="project-body">
         <span class="project-idx">01</span>
-        <span class="project-tag">Application SaaS</span>
+        <div class="project-tag-row">
+          <span class="project-tag">Application SaaS</span>
+        </div>
         <h3>La Table Libre</h3>
         <p class="desc">Réservation en ligne pour restaurants indépendants. SaaS Laravel multi-établissement : inscription du restaurant, page de réservation publique auto-générée, gestion des tables depuis un tableau de bord.</p>
         <div class="chiprow"><span>Multi-tenant</span><span>Anti-double-booking</span><span>Laravel</span></div>
@@ -410,7 +418,9 @@
       </div>
       <div class="project-body">
         <span class="project-idx">02</span>
-        <span class="project-tag">Application métier</span>
+        <div class="project-tag-row">
+          <span class="project-tag">Application métier</span>
+        </div>
         <h3>PharmaStock</h3>
         <p class="desc">Gestion de stock multi-officine. Application PHP native (PDO/MySQL) : stock recalculé automatiquement depuis l'historique des mouvements, alertes de stock bas et de péremption.</p>
         <div class="chiprow"><span>Stock auto-calculé</span><span>Alertes péremption</span><span>CSRF + requêtes préparées</span></div>
@@ -420,14 +430,18 @@
     <div class="project-card">
       <div class="browser-frame">
         <div class="frame-bar"><span></span><span></span><span></span></div>
-        <div class="frame-body mock-hero">
-          <div class="block big"></div>
-          <div class="btnrow"><div class="block accent"></div><div class="block"></div></div>
+        <div class="frame-body has-shot">
+          <img src="assets/img/projects/black-winner.jpg" alt="Aperçu du site Black Winner Auto École" loading="lazy">
         </div>
       </div>
       <div class="project-body">
         <span class="project-idx">03</span>
-        <span class="project-tag">Vitrine + back-office</span>
+        <div class="project-tag-row">
+          <span class="project-tag">Vitrine + back-office</span>
+          <a class="visit-link" href="https://black-winner-auto-ecole.vercel.app" target="_blank" rel="noopener">Voir le site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
         <h3>Black Winner Auto École</h3>
         <p class="desc">Site vitrine complet avec plateforme de pré-inscription et programme de parrainage, connecté à une base de données via une interface d'administration pour traiter les demandes.</p>
         <div class="chiprow"><span>Pré-inscriptions</span><span>Parrainage</span><span>Back-office admin</span></div>
@@ -445,7 +459,12 @@
       </div>
       <div class="project-body">
         <span class="project-idx">04</span>
-        <span class="project-tag">Landing de conversion</span>
+        <div class="project-tag-row">
+          <span class="project-tag">Landing de conversion</span>
+          <a class="visit-link" href="https://espero-carlos-site.vercel.app" target="_blank" rel="noopener">Voir le site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
         <h3>Espero Carlos</h3>
         <p class="desc">De la visibilité à la conversion : refonte complète d'un site WordPress en page de vente HTML/CSS pure, structurée comme un tunnel de conversion plutôt qu'une vitrine passive.</p>
         <div class="chiprow"><span>Funnel de conversion</span><span>Refonte WordPress → HTML/CSS</span></div>
@@ -455,18 +474,43 @@
     <div class="project-card">
       <div class="browser-frame">
         <div class="frame-bar"><span></span><span></span><span></span></div>
-        <div class="frame-body mock-grid">
-          <div class="cell"></div><div class="cell"></div>
-          <div class="cell"></div><div class="cell"></div>
-          <div class="line-full"></div>
+        <div class="frame-body has-shot">
+          <img src="assets/img/projects/pakson-group.jpg" alt="Aperçu du site Pakson Group" loading="lazy">
         </div>
       </div>
       <div class="project-body">
         <span class="project-idx">05</span>
-        <span class="project-tag">Site vitrine</span>
+        <div class="project-tag-row">
+          <span class="project-tag">Site vitrine</span>
+          <a class="visit-link" href="https://pakson-groupecom.vercel.app" target="_blank" rel="noopener">Voir le site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
         <h3>Pakson Group</h3>
         <p class="desc">Site vitrine multi-pages (HTML/CSS/JS, Bootstrap) présentant 10 prestations agricoles, avec formulaire de contact et bouton d'accès WhatsApp direct.</p>
         <div class="chiprow"><span>10 prestations</span><span>Bouton WhatsApp</span><span>Bootstrap</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="browser-frame">
+        <div class="frame-bar"><span></span><span></span><span></span></div>
+        <div class="frame-body mock-hero">
+          <div class="block big"></div>
+          <div class="btnrow"><div class="block accent"></div><div class="block"></div></div>
+        </div>
+      </div>
+      <div class="project-body">
+        <span class="project-idx">06</span>
+        <div class="project-tag-row">
+          <span class="project-tag">Site vitrine</span>
+          <a class="visit-link" href="https://site-rosy-nine-5xavapqzeu.vercel.app" target="_blank" rel="noopener">Voir le site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+        <h3>Aura+</h3>
+        <p class="desc">Site vitrine pour un studio de production audiovisuelle et photographie. Présentation du studio, galerie de réalisations, mise en avant des collaborations, orienté identité artistique forte.</p>
+        <div class="chiprow"><span>Galerie</span><span>Identité de marque</span><span>HTML/CSS/JS</span></div>
       </div>
     </div>
 
