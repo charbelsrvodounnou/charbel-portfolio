@@ -159,11 +159,12 @@
   .project-card:last-child { margin-bottom: 0; }
   @media (max-width: 720px) { .project-card { grid-template-columns: 1fr; } }
   .project-idx {
-    position: absolute; top: 14px; right: 22px;
-    font-family: var(--font-display); font-weight: 800; font-size: 3rem;
-    color: var(--line); z-index: 0; line-height: 1;
+    position: absolute; top: 10px; right: 14px;
+    font-family: var(--font-display); font-weight: 800; font-size: 2.2rem;
+    color: rgba(245,244,242,0.55); z-index: 1; line-height: 1;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
   }
-  .browser-frame { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; z-index: 1; }
+  .browser-frame { position: relative; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; z-index: 1; aspect-ratio: 12 / 7; }
   .frame-bar { display: flex; gap: 6px; padding: 9px 11px; border-bottom: 1px solid var(--line); }
   .frame-bar span { width: 7px; height: 7px; border-radius: 50%; background: var(--line); }
   .frame-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; min-height: 150px; }
@@ -389,13 +390,13 @@
 
     <div class="project-card">
       <div class="browser-frame">
+        <span class="project-idx">01</span>
         <div class="frame-bar"><span></span><span></span><span></span></div>
         <div class="frame-body has-shot">
           <img src="assets/img/projects/la-table-libre.jpg" alt="Aperçu du site La Table Libre" loading="lazy">
         </div>
       </div>
       <div class="project-body">
-        <span class="project-idx">01</span>
         <div class="project-tag-row">
           <span class="project-tag">Application SaaS</span>
         </div>
@@ -407,13 +408,13 @@
 
     <div class="project-card">
       <div class="browser-frame">
+        <span class="project-idx">02</span>
         <div class="frame-bar"><span></span><span></span><span></span></div>
         <div class="frame-body has-shot">
           <img src="assets/img/projects/pharmastock.jpg" alt="Aperçu du site PharmaStock" loading="lazy">
         </div>
       </div>
       <div class="project-body">
-        <span class="project-idx">02</span>
         <div class="project-tag-row">
           <span class="project-tag">Application métier</span>
         </div>
@@ -425,13 +426,13 @@
 
     <div class="project-card">
       <div class="browser-frame">
+        <span class="project-idx">03</span>
         <div class="frame-bar"><span></span><span></span><span></span></div>
         <div class="frame-body has-shot">
           <img src="assets/img/projects/black-winner.jpg" alt="Aperçu du site Black Winner Auto École" loading="lazy">
         </div>
       </div>
       <div class="project-body">
-        <span class="project-idx">03</span>
         <div class="project-tag-row">
           <span class="project-tag">Vitrine + back-office</span>
           <a class="visit-link" href="https://black-winner-auto-ecole.vercel.app" target="_blank" rel="noopener">Voir le site
@@ -446,13 +447,13 @@
 
     <div class="project-card">
       <div class="browser-frame">
+        <span class="project-idx">04</span>
         <div class="frame-bar"><span></span><span></span><span></span></div>
         <div class="frame-body has-shot">
           <img src="assets/img/projects/espero-carlos.jpg" alt="Aperçu du site Espero Carlos" loading="lazy">
         </div>
       </div>
       <div class="project-body">
-        <span class="project-idx">04</span>
         <div class="project-tag-row">
           <span class="project-tag">Landing de conversion</span>
           <a class="visit-link" href="https://espero-carlos-site.vercel.app" target="_blank" rel="noopener">Voir le site
@@ -467,13 +468,13 @@
 
     <div class="project-card">
       <div class="browser-frame">
+        <span class="project-idx">05</span>
         <div class="frame-bar"><span></span><span></span><span></span></div>
         <div class="frame-body has-shot">
           <img src="assets/img/projects/pakson-group.jpg" alt="Aperçu du site Pakson Group" loading="lazy">
         </div>
       </div>
       <div class="project-body">
-        <span class="project-idx">05</span>
         <div class="project-tag-row">
           <span class="project-tag">Site vitrine</span>
           <a class="visit-link" href="https://pakson-groupecom.vercel.app" target="_blank" rel="noopener">Voir le site
@@ -488,13 +489,13 @@
 
     <div class="project-card">
       <div class="browser-frame">
+        <span class="project-idx">06</span>
         <div class="frame-bar"><span></span><span></span><span></span></div>
         <div class="frame-body has-shot">
           <img src="assets/img/projects/aura-plus.jpg" alt="Aperçu du site Aura+" loading="lazy">
         </div>
       </div>
       <div class="project-body">
-        <span class="project-idx">06</span>
         <div class="project-tag-row">
           <span class="project-tag">Site vitrine</span>
           <a class="visit-link" href="https://site-rosy-nine-5xavapqzeu.vercel.app" target="_blank" rel="noopener">Voir le site
