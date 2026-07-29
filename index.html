@@ -26,7 +26,7 @@
   }
 
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
+  html, body { margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; }
   body {
     background: var(--bg);
     color: var(--ink);
@@ -79,7 +79,7 @@
 
   .portrait { position: relative; }
   .portrait .glow {
-    position: absolute; inset: -14% -20%;
+    position: absolute; inset: -14% -8%;
     background: radial-gradient(circle at 40% 35%, var(--accent) 0%, rgba(255,122,31,0.35) 32%, rgba(255,122,31,0) 68%);
     filter: blur(6px);
     z-index: 0;
@@ -390,9 +390,8 @@
     <div class="project-card">
       <div class="browser-frame">
         <div class="frame-bar"><span></span><span></span><span></span></div>
-        <div class="frame-body mock-dashboard">
-          <div class="side"></div>
-          <div class="main"><div class="block"></div><div class="block accent"></div></div>
+        <div class="frame-body has-shot">
+          <img src="assets/img/projects/la-table-libre.jpg" alt="Aperçu du site La Table Libre" loading="lazy">
         </div>
       </div>
       <div class="project-body">
@@ -409,11 +408,8 @@
     <div class="project-card">
       <div class="browser-frame">
         <div class="frame-bar"><span></span><span></span><span></span></div>
-        <div class="frame-body mock-table">
-          <div class="row alert"><span class="dot"></span><span class="line"></span></div>
-          <div class="row"><span class="dot"></span><span class="line"></span></div>
-          <div class="row"><span class="dot"></span><span class="line"></span></div>
-          <div class="row alert"><span class="dot"></span><span class="line"></span></div>
+        <div class="frame-body has-shot">
+          <img src="assets/img/projects/pharmastock.jpg" alt="Aperçu du site PharmaStock" loading="lazy">
         </div>
       </div>
       <div class="project-body">
@@ -451,10 +447,8 @@
     <div class="project-card">
       <div class="browser-frame">
         <div class="frame-bar"><span></span><span></span><span></span></div>
-        <div class="frame-body mock-funnel">
-          <div class="block accent"></div>
-          <div class="block accent"></div>
-          <div class="block accent"></div>
+        <div class="frame-body has-shot">
+          <img src="assets/img/projects/espero-carlos.jpg" alt="Aperçu du site Espero Carlos" loading="lazy">
         </div>
       </div>
       <div class="project-body">
@@ -495,9 +489,8 @@
     <div class="project-card">
       <div class="browser-frame">
         <div class="frame-bar"><span></span><span></span><span></span></div>
-        <div class="frame-body mock-hero">
-          <div class="block big"></div>
-          <div class="btnrow"><div class="block accent"></div><div class="block"></div></div>
+        <div class="frame-body has-shot">
+          <img src="assets/img/projects/aura-plus.jpg" alt="Aperçu du site Aura+" loading="lazy">
         </div>
       </div>
       <div class="project-body">
